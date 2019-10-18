@@ -139,7 +139,6 @@ class CreditCardForm extends React.Component {
     return (
       <>
         <Input
-          inputMode="numeric"
           maxLength={nameMaxLength}
           name="name"
           onChange={this.handleChange}
