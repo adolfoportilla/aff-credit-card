@@ -1,30 +1,22 @@
 @import '../../scss/base.scss';
 
+// Changes color of input placeholder
 ::placeholder {
-  // color: grey;
-  // color: #7f8c8d;
-  // color: #bdc3c7;
-  // color: #68737a; darker
   color: #848f96;
 }
 
 .credit-card-form {
   background-color: $affirm-dark-pink;
-  // background-color: $background;
   border-radius: 5px;
   padding-top: 50px;
   padding-bottom: 50px;
+  width: 400px;
   box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
 
   .credit-card-input {
     height: 35px;
     border-radius: 8px;
-    // background: #34495e;
     background: $affirm-pink;
-    border-style: solid;
-    border-color: $affirm-pink;
-    // color: #4e565b;
-    color: blue;
 
     &.half {
       width: calc(50% - 5px);
@@ -35,36 +27,24 @@
     height: 30px;
     border-radius: 5px;
     background: $affirm;
-    color: $white;
+    color: $background;
       &:active {
-        // border: 1px solid $primary;
-        // background-color: $affirm-green-secondary;
-        // background-color: $affirm-lighter;
-        background-color: #0d4e9c;
-        // background-color: #62a3f1;
+        background-color: $affirm-darker;
       }
   }
 
   .error {
     @extend  .m-t-med, .m-l-xxl, .m-r-xxl, .p-t-sm, .p-b-sm;
-    // @extend  .m-t-med,  .p-t-sm, .p-b-sm;
-    color: $white;
-    // font-size: 0.85rem;
-    margin-bottom: -36.5px;
+    border-radius: 3px;
     background: $background;
-    // background: #f5dadc;
-    border-radius: 5px;
-    // outline: ;
+    // This is to prevent the error from changing the form height.
+    margin-bottom: -34.0px;
 
     .error-message {
       @extend .m-t-none, .m-b-none;
-      color: #E95757;
-      // color: white;
-      font-family: Arial, Helvetica, sans-serif;
+      color: $affirm-salmon;
       font-weight: 500;
-      font-size: 14px;
-      // margin-left: 2px;
-
+      font-size: 12px;
     }
 
   }

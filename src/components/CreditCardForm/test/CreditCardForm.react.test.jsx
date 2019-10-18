@@ -1,13 +1,22 @@
 import React from "react";
 import { shallow } from "enzyme";
+import { format } from "util";
 
 import CreditCardForm from "../CreditCardForm";
 import CardType from "../components/CardType";
 import Button from "../helpers/Button/Button";
 import Input from "../helpers/Input/Input";
 import creditCards from "../cards";
+import errors from "../errors";
 
 describe("CreditCardForm", () => {
+  const d = new Date();
+  const month = d.getMonth().toString();
+  const year = d
+    .getFullYear()
+    .toString()
+    .substr(2);
+
   describe("handleChange", () => {
     test("finds correct validator", () => {
       const wrapper = shallow(<CreditCardForm />);
@@ -137,6 +146,90 @@ describe("CreditCardForm", () => {
       expect(wrapper.state("expiry")).toBe("");
       expect(wrapper.state("cvc")).toBe("");
       expect(wrapper.state("cardType")).toBe("");
+    });
+  });
+
+  describe("displayErrorMessage", () => {
+    test("sets invalid name", () => {
+      const wrapper = shallow(<CreditCardForm />);
+
+      wrapper.instance().displayErrorMessage();
+
+      expect(wrapper.state("errorMessage")).toBe(errors.invalidName);
+    });
+
+    test("sets incomplete number", () => {
+      const wrapper = shallow(<CreditCardForm />);
+
+      wrapper.setState({ name: "valid", number: "123" });
+      wrapper.instance().displayErrorMessage();
+
+      expect(wrapper.state("errorMessage")).toBe(errors.incompleteNumber);
+    });
+
+    test("sets invalid number", () => {
+      const wrapper = shallow(<CreditCardForm />);
+
+      wrapper.setState({ name: "valid", number: "1234567890123456789" });
+      wrapper.instance().displayErrorMessage();
+
+      expect(wrapper.state("errorMessage")).toBe(errors.invalidNumber);
+    });
+
+    test("sets incomplete expiry", () => {
+      const wrapper = shallow(<CreditCardForm />);
+
+      wrapper.setState({
+        name: "valid",
+        number: "1234 1234 1234 1234",
+        expiry: "01"
+      });
+      wrapper.instance().displayErrorMessage();
+
+      expect(wrapper.state("errorMessage")).toBe(errors.incompleteExpiry);
+    });
+
+    test("sets invalid expiry", () => {
+      const wrapper = shallow(<CreditCardForm />);
+
+      wrapper.setState({
+        name: "valid",
+        number: "1234 1234 1234 1234",
+        expiry: "01 / 19"
+      });
+      wrapper.instance().displayErrorMessage();
+
+      expect(wrapper.state("errorMessage")).toBe(
+        format(errors.invalidExpiry, `${month}/${year}`)
+      );
+    });
+
+    test("sets incomplete cvc", () => {
+      const wrapper = shallow(<CreditCardForm />);
+
+      wrapper.setState({
+        name: "valid",
+        number: "1234 1234 1234 1234",
+        expiry: "01 / 25",
+        cvc: "0"
+      });
+      wrapper.instance().displayErrorMessage();
+
+      expect(wrapper.state("errorMessage")).toBe(errors.incompleteCVC);
+    });
+
+    test("sets invalid card type", () => {
+      const wrapper = shallow(<CreditCardForm />);
+
+      wrapper.setState({
+        name: "valid",
+        number: "1234 1234 1234 1234",
+        expiry: "01 / 25",
+        cvc: "0000"
+      });
+      wrapper.instance().displayErrorMessage();
+
+      expect(wrapper.state("errorMessage")).toBe(errors.invalidCardType);
     });
   });
 
