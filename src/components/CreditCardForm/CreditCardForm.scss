@@ -13,6 +13,10 @@
   width: 400px;
   box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1), 0 3px 6px rgba(0, 0, 0, 0.08);
 
+  @include small-only {
+    width: 300px;
+  }
+
   .credit-card-input {
     height: 35px;
     border-radius: 8px;
@@ -35,6 +39,11 @@
 
   .error {
     @extend  .m-t-med, .m-l-xxl, .m-r-xxl, .p-t-sm, .p-b-sm;
+    @include small-only {
+      margin-left: $sm;
+      margin-right: $sm;
+    }
+
     border-radius: 3px;
     background: $background;
     // This is to prevent the error from changing the form height.
@@ -45,6 +54,10 @@
       color: $affirm-salmon;
       font-weight: 500;
       font-size: 12px;
+
+      @include small-only {
+        font-size: 10px;
+      }
     }
 
   }
