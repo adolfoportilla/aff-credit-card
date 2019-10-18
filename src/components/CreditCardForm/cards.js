@@ -113,6 +113,12 @@ const formatNumberAmex = num => {
 const formatExpiry = exp => {
   let formattedText = exp.split(" / ").join("");
 
+  if (exp.length === 7) {
+    exp = exp.split("/");
+    exp = exp[0] + " / " + exp[1].substr(2);
+    return exp;
+  }
+
   // Remove the " / " if the user deletes the year
   // i.e. "03 / " => "03"
   // i.e. "12 /" => "12"
