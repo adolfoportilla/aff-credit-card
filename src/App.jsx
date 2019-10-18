@@ -8,7 +8,7 @@ export default class App extends React.Component {
     return (
       <div>
         <header className="App-header">
-          <div className="flex flex-wrap lg-12">
+          <div className="flex flex-wrap">
             <CreditCardForm />
           </div>
         </header>

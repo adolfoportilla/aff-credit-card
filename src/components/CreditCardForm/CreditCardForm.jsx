@@ -202,7 +202,7 @@ class CreditCardForm extends React.Component {
 
   render() {
     return (
-      <form className="credit-card-form lg-8">
+      <form className="credit-card-form">
         <div className="m-l-xl m-r-xl">{this.renderInputs()}</div>
       </form>
     );

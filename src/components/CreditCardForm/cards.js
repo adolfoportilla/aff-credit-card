@@ -66,9 +66,9 @@ const formatNumberDefault = num => {
 };
 
 /**
- * Formats a credit card number with spaces after each group of (4,5,6) characters.
+ * Formats a credit card number with spaces after each group of (4,6,5) characters.
  * i.e. "12345" => "1234 5"
- * i.e. "1234 123456" => "1234 12345 6"
+ * i.e. "1234 1234567" => "1234 123456 7"
  *
  * @param {string} num - Credit card number.
  * @returns {string} Number formatted with spaces after 4 chars.
@@ -76,10 +76,10 @@ const formatNumberDefault = num => {
 const formatNumberAmex = num => {
   let formattedText = num.split(" ").join("");
   if (formattedText.length > 0) {
-    // Splits a string after 4, 5, and 6 chars.
+    // Splits a string after 4, 6, and 5 chars.
     // i.e "12345" => ["1234", "5"]
-    // i.e "12345678901" => ["1234", "56789", "01"]
-    let regex = /([\d?]{1,4})([\d]{0,5})([\d]{0,6})/g;
+    // i.e "12345678901" => ["1234", "567890", "01"]
+    let regex = /([\d?]{1,4})([\d]{0,6})([\d]{0,5})/g;
     let regexResult = regex.exec(formattedText);
     formattedText = regexResult
       .slice(1, 4)

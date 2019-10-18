@@ -124,8 +124,8 @@ describe("cards", () => {
       // Every 4 characters, it adds a space
       expect(format("01234")).toBe("0123 4");
       expect(format("1234 12345")).toBe("1234 12345");
-      expect(format("1234 123451")).toBe("1234 12345 1");
-      expect(format("123412345123456")).toBe("1234 12345 123456");
+      expect(format("1234 1234561")).toBe("1234 123456 1");
+      expect(format("123412345612345")).toBe("1234 123456 12345");
     });
 
     test("isCardType", () => {
