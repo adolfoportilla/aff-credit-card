@@ -1,0 +1,18 @@
+@import '../../../../scss/base.scss';
+
+.button {
+  &:hover {
+    background-color: #3588ee;
+  }
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  transition: color 0.25s ease, fill 0.25s ease;
+  &:hover, &:active, &:focus {
+    background-color: blue;
+    text-decoration: none;
+  }
+}

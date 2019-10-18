@@ -1,0 +1,142 @@
+// can @extend this to any class in .scss files or include it in classNames in .jsx files
+// "p" indicates padding, "t" top, "b" bottom, "r" right, "l" left
+
+.p-none {
+  padding: 0;
+}
+
+.p-xs {
+  padding: 3px;
+}
+
+.p-sm {
+  padding: 5px;
+}
+
+.p-med {
+  padding: 10px;
+}
+
+.p-lg {
+  padding: 15px;
+}
+
+.p-xl {
+  padding: 20px;
+}
+
+.p-xxl {
+  padding: 30px;
+}
+
+.p-t-none {
+  padding-top: 0;
+}
+
+.p-t-xs {
+  padding-top: 3px;
+}
+
+.p-t-sm {
+  padding-top: 5px;
+}
+
+.p-t-med {
+  padding-top: 10px;
+}
+
+.p-t-lg {
+  padding-top: 15px;
+}
+
+.p-t-xl {
+  padding-top: 20px;
+}
+
+.p-t-xxl {
+  padding-top: 30px;
+}
+
+.p-b-none {
+  padding-bottom: 0;
+}
+
+.p-b-xs {
+  padding-bottom: 3px;
+}
+
+.p-b-sm {
+  padding-bottom: 5px;
+}
+
+.p-b-med {
+  padding-bottom: 10px;
+}
+
+.p-b-lg {
+  padding-bottom: 15px;
+}
+
+.p-b-xl {
+  padding-bottom: 20px;
+}
+
+.p-b-xxl {
+  padding-bottom: 30px;
+}
+
+.p-r-none {
+  padding-right: 0;
+}
+
+.p-r-xs {
+  padding-right: 3px;
+}
+
+.p-r-sm {
+  padding-right: 5px;
+}
+
+.p-r-med {
+  padding-right: 10px;
+}
+
+.p-r-lg {
+  padding-right: 15px;
+}
+
+.p-r-xl {
+  padding-right: 20px;
+}
+
+.p-r-xxl {
+  padding-right: 30px;
+}
+
+.p-l-none {
+  padding-left: 0;
+}
+
+.p-l-xs {
+  padding-left: 3px;
+}
+
+.p-l-sm {
+  padding-left: 5px;
+}
+
+.p-l-med {
+  padding-left: 10px;
+}
+
+.p-l-lg {
+  padding-left: 15px;
+}
+
+.p-l-xl {
+  padding-left: 20px;
+}
+
+.p-l-xxl {
+  padding-left: 30px;
+}

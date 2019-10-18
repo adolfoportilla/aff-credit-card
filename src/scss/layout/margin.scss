@@ -1,0 +1,142 @@
+// can @extend this to any class in .scss files or include it in classNames in .jsx files
+// "m" indicates margin, "t" top, "b" bottom, "r" right, "l" left
+
+.m-none {
+  margin: 0;
+}
+
+.m-sm {
+  margin: 5px;
+}
+
+.m-med {
+  margin: 10px;
+}
+
+.m-lg {
+  margin: 15px;
+}
+
+.m-xl {
+  margin: 20px;
+}
+
+.m-xxl {
+  margin: 30px;
+}
+
+.m-auto {
+  margin: auto;
+}
+
+.m-t-none {
+  margin-top: 0;
+}
+
+.m-t-sm {
+  margin-top: 5px;
+}
+
+.m-t-med {
+  margin-top: 10px;
+}
+
+.m-t-lg {
+  margin-top: 15px;
+}
+
+.m-t-xl {
+  margin-top: 20px;
+}
+
+.m-t-xxl {
+  margin-top: 30px;
+}
+
+.m-t-auto {
+  margin-top: auto;
+}
+
+.m-b-none {
+  margin-bottom: 0;
+}
+
+.m-b-sm {
+  margin-bottom: 5px;
+}
+
+.m-b-med {
+  margin-bottom: 10px;
+}
+
+.m-b-lg {
+  margin-bottom: 15px;
+}
+
+.m-b-xl {
+  margin-bottom: 20px;
+}
+
+.m-b-xxl {
+  margin-bottom: 30px;
+}
+
+.m-b-auto {
+  margin-bottom: auto;
+}
+
+.m-r-none {
+  margin-right: 0;
+}
+
+.m-r-sm {
+  margin-right: 5px;
+}
+
+.m-r-med {
+  margin-right: 10px;
+}
+
+.m-r-lg {
+  margin-right: 15px;
+}
+
+.m-r-xl {
+  margin-right: 20px;
+}
+
+.m-r-xxl {
+  margin-right: 30px;
+}
+
+.m-r-auto {
+  margin-right: auto;
+}
+
+.m-l-none {
+  margin-left: 0;
+}
+
+.m-l-sm {
+  margin-left: 5px;
+}
+
+.m-l-med {
+  margin-left: 10px;
+}
+
+.m-l-lg {
+  margin-left: 15px;
+}
+
+.m-l-xl {
+  margin-left: 20px;
+}
+
+.m-l-xxl {
+  margin-left: 30px;
+}
+
+.m-l-auto {
+  margin-left: auto;
+}

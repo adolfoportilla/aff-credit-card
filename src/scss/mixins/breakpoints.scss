@@ -1,0 +1,29 @@
+// copied some of these breakpoint numbers from Bootstrap, modified others
+
+@mixin small-only {
+  @media (max-width: 700px) { @content; }
+}
+@mixin medium-only {
+  @media (min-width: 701px) and (max-width: 992px) { @content; }
+}
+@mixin large-only {
+  @media (min-width: 993px) and (max-width: 1199px) { @content; }
+}
+@mixin extra-large-only {
+  @media (min-width: 1200px) { @content; }
+}
+
+@mixin medium-up {
+  @media (min-width: 701px) { @content; }
+}
+@mixin large-up {
+  @media (min-width: 993px) { @content; }
+}
+
+
+@mixin medium-down {
+  @media (max-width: 992px) { @content; }
+}
+@mixin large-down {
+  @media (max-width: 1199px) { @content; }
+}

@@ -1,0 +1,13 @@
+@import '../../../../scss/base.scss';
+
+input {
+  border: none;
+  background: transparent !important;
+  padding-left: 6px;
+  width: 100%;
+
+}
+
+::placeholder {
+  color: #bdc3c7;
+}
