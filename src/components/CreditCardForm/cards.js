@@ -113,6 +113,8 @@ const formatNumberAmex = num => {
 const formatExpiry = exp => {
   let formattedText = exp.split(" / ").join("");
 
+  // This is for autofills that include MM/YYYY. It splits correctly the
+  // months and the years.
   if (exp.length === 7) {
     exp = exp.split("/");
     exp = exp[0] + " / " + exp[1].substr(2);

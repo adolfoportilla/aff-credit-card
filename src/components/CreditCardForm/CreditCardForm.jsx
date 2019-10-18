@@ -137,11 +137,9 @@ class CreditCardForm extends React.Component {
           name="name"
           onChange={this.handleChange}
           placeholder={staticText.namePlaceholder}
-          type="text"
           value={name}
           wrapperClassName="m-b-med credit-card-input flex"
           autocomplete="cc-name"
-          required
         />
         <div className="m-b-med credit-card-input flex">
           <CardType type={this.state.cardType} wrapperClassName="flex" />
@@ -150,9 +148,7 @@ class CreditCardForm extends React.Component {
             maxLength={numberLength}
             name="number"
             onChange={this.handleChange}
-            onKeyDown={this.handleSpace}
             placeholder={staticText.numberPlaceholder}
-            type="text"
             value={number}
             wrapperClassName="flex"
             autocomplete="cc-number"
