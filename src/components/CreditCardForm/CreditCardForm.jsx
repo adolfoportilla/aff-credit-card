@@ -139,6 +139,7 @@ class CreditCardForm extends React.Component {
     return (
       <>
         <Input
+          inputMode="numeric"
           maxLength={nameMaxLength}
           name="name"
           onChange={this.handleChange}
@@ -172,6 +173,7 @@ class CreditCardForm extends React.Component {
             autocomplete="cc-exp"
           />
           <Input
+            inputMode="numeric"
             maxLength={CVCLength}
             name="cvc"
             onChange={this.handleChange}
